@@ -35,18 +35,18 @@ Create two file
 
 This will look something like this :
 
-![Screenshot from 2023-05-19 10-29-16](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/12d6a0e6-21c5-4f29-853f-d1a65f2c67ff](https://user-images.githubusercontent.com/126334005/239445518-12d6a0e6-21c5-4f29-853f-d1a65f2c67ff.png)
+![Screenshot from 2023-05-19 10-29-16](https://user-images.githubusercontent.com/126334005/239445518-12d6a0e6-21c5-4f29-853f-d1a65f2c67ff.png)
 
-![Screenshot from 2023-05-19 12-03-39](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/59d11f73-f68d-4313-8bf8-a5646f545514)
+![Screenshot from 2023-05-19 12-03-39](https://user-images.githubusercontent.com/126334005/239456683-59d11f73-f68d-4313-8bf8-a5646f545514.png)
 
 
 ## in policy.yml :
 
-![Screenshot from 2023-05-19 10-54-06](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/d4744617-9528-4d15-8c5d-97e666b4f841)
+![Screenshot from 2023-05-19 10-54-06](https://user-images.githubusercontent.com/126334005/239453462-d4744617-9528-4d15-8c5d-97e666b4f841.png)
 
 ## creating Dockerfile with base image of cloudcustodian/c7n
 
-![Screenshot from 2023-06-02 17-31-50](https://github.com/rajatmall05/Clous-Custodian-minkube/assets/126334005/3cf2e3f4-1bf1-4c65-9f85-f382955d4c13)
+![Screenshot from 2023-06-02 17-31-50](https://user-images.githubusercontent.com/126334005/242878355-3cf2e3f4-1bf1-4c65-9f85-f382955d4c13.png)
 
 
 #### note :
@@ -61,7 +61,7 @@ This will look something like this :
 
 ## creating cronjob in minikube
 
-![Screenshot from 2023-05-19 11-50-21](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/0dd6da04-f0b1-4a10-9924-9cf2b98cb054)
+![Screenshot from 2023-05-19 11-50-21](https://user-images.githubusercontent.com/126334005/239454253-0dd6da04-f0b1-4a10-9924-9cf2b98cb054.png)
 
 *save this file as cronjob.yml
 
@@ -85,15 +85,15 @@ minikube dashboard > cronjob
 #### note : While watching pods in minkube , it will always show pods going in running state and eventually goes down , this is normal because cloud-custodian does it job and exit the script . 
 
 #### For this we have used cronjob so when the pod goes down , the cron job triggers itself and it will again run the pod . 
-![Screenshot from 2023-05-19 12-44-13](https://github.com/rajatmall05/Clous-Custodian-minkube/assets/126334005/4df51642-f03d-46a2-8f4c-7a511f150313)
+![Screenshot from 2023-05-19 12-44-13](https://user-images.githubusercontent.com/126334005/239464991-4df51642-f03d-46a2-8f4c-7a511f150313.png)
 
 ### Using k8s secrets for passing aws-credentials 
 1. Create secret.yml 
     
-![image](https://github.com/rajatmall05/Clous-Custodian-minkube/assets/126334005/513c0bd1-602d-416b-8f1e-22a6e00754b6)
+![image](https://user-images.githubusercontent.com/126334005/242876247-513c0bd1-602d-416b-8f1e-22a6e00754b6.png)
     
 2. Passing secrets in cron-job 
     
-![Screenshot from 2023-06-02 17-25-30](https://github.com/rajatmall05/Clous-Custodian-minkube/assets/126334005/3020e2f5-1b06-47a3-8c82-81e7c1f82d76)
+![Screenshot from 2023-06-02 17-25-30](https://user-images.githubusercontent.com/126334005/242877091-3020e2f5-1b06-47a3-8c82-81e7c1f82d76.png)
 
 #### note : now follow the same steps (running a cron-job) that are mentioned above .
