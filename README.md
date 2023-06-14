@@ -35,7 +35,7 @@ Create two file
 
 This will look something like this :
 
-![Screenshot from 2023-05-19 10-29-16](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/12d6a0e6-21c5-4f29-853f-d1a65f2c67ff)
+![Screenshot from 2023-05-19 10-29-16](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/12d6a0e6-21c5-4f29-853f-d1a65f2c67ff](https://user-images.githubusercontent.com/126334005/239445518-12d6a0e6-21c5-4f29-853f-d1a65f2c67ff.png)
 
 ![Screenshot from 2023-05-19 12-03-39](https://github.com/rajatmall05/Cloud-Custodian/assets/126334005/59d11f73-f68d-4313-8bf8-a5646f545514)
 
