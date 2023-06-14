@@ -1,0 +1,95 @@
+# Policy for EC2 resource : Tag checking
+
+policies:
+  - name: ec2-absent-tag
+    resource: ec2
+    filters:
+      - "tag:Project": absent
+      - "tag:Environment": absent
+      - "tag:Workload": absent  
+    actions:
+      - type: notify
+        template: custom.html
+        priority_header: '2'
+        subject: ABSENT TAG EC2
+        to:
+          - example@gmail.com
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/815981036735/MySQS
+
+# Policy for S3 resource : Tag checking            
+ 
+  - name: cloud-custodian-s3-bucket
+    resource: s3
+    filters:
+      - "tag:Project": absent
+      - "tag:Environment": absent
+      - "tag:Workload": absent
+    actions:
+      - type: notify
+        template: custom.html
+        priority_header: '2'
+        subject: ABSENT TAG S3
+        to:
+          - example@gmail.com
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/815981036735/MySQS
+
+# Policy for RDS resource : Tag checking
+  
+  - name: database-1
+    resource: rds
+    filters:
+      - "tag:Project": absent
+      - "tag:Environment": absent
+      - "tag:Workload": absent
+    actions:
+      - type: notify
+        template: custom.html
+        priority_header: '2'
+        subject: ABSENT TAG RDS
+        to:
+          - example@gmail.com
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/815981036735/MySQS
+
+# Policy for SNS resource : Tag checking       
+     
+  - name: MySNS
+    resource: sns
+    filters:
+      - "tag:Project": absent
+      - "tag:Environment": absent
+      - "tag:Workload": absent
+    actions:
+      - type: notify
+        template: custom.html
+        priority_header: '2'
+        subject: ABSENT TAG SNS
+        to:
+          - example@gmail.com
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/815981036735/MySQS
+
+# Policy for SQS resource : Tag checking       
+     
+  - name: MySQS
+    resource: sqs
+    filters:
+      - "tag:Project": absent
+      - "tag:Environment": absent
+      - "tag:Workload": absent
+    actions:
+      - type: notify
+        template: custom.html
+        priority_header: '2'
+        subject: ABSENT TAG SQS
+        to:
+          - example@gmail.com
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/815981036735/MySQS
